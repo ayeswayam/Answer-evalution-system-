@@ -1,15 +1,31 @@
 import os
+import sys
 from fastapi import FastAPI, HTTPException, File, UploadFile, Form
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel
 import pandas as pd
 import io
 import json
 from typing import Optional, List
-# Import our evaluation system
+
+# Add the current directory to Python path
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
+# Import the evaluation system
 from answer_evaluation import AnswerEvaluationSystem, evaluate_answers, evaluate_single_answer
 
 app = FastAPI(title="Answer Evaluation System API")
+
+# Add CORS middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allows all origins
+    allow_credentials=True,
+    allow_methods=["*"],  # Allows all methods
+    allow_headers=["*"],  # Allows all headers
+)
+
 evaluator = AnswerEvaluationSystem()
 
 class AnswerRequest(BaseModel):
@@ -70,4 +86,4 @@ async def evaluate_batch(file: UploadFile = File(...)):
 if __name__ == "__main__":
     import uvicorn
     port = int(os.environ.get("PORT", 10000))
-    uvicorn.run("app:app", host="0.0.0.0", port=port, reload=False)
+    uvicorn.run(app, host="0.0.0.0", port=port)
