@@ -1,0 +1,12 @@
+# yaml-language-server: $schema=https://www.ploomber.io/schemas/pipeline.json
+tasks:
+ - source: ploomber_task.py
+ product:
+ nb: evaluation_results.csv
+ upstream:
+ - data
+
+products:
+ data: '{{input_data_path}}'
+resources:
+ memory: 4Gi
