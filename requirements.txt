@@ -14,4 +14,4 @@ flask
 gunicorn
 python-multipart
 pydantic
-python-dotenv
+starlette
