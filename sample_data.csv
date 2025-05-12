@@ -1,0 +1,37 @@
+"""
+question_id,question,student_answer,model_answer
+1,"What is the cell theory?","The cell theory states that all living things are made of cells,
+cells are the basic unit of structure and function, and all cells come from pre-existing
+cells.","The cell theory consists of three main principles: (1) All living organisms are
+composed of one or more cells; (2) The cell is the basic unit of structure and organization in
+organisms; (3) All cells arise from pre-existing cells through cell division."
+2,"Explain photosynthesis.","Photosynthesis is when plants make food from sunlight using
+chlorophyll.","Photosynthesis is the process by which green plants, algae, and some bacteria
+convert light energy, usually from the sun, into chemical energy in the form of glucose. This
+process occurs in the chloroplasts and involves taking in carbon dioxide and water, and
+releasing oxygen as a byproduct. The overall chemical equation is: 6CO2 + 6H2O + light
+energy → C6H12O6 + 6O2."
+3,"Define Newton's Second Law of Motion.","F=ma which means force equals mass times
+acceleration.","Newton's Second Law of Motion states that the acceleration of an object is
+directly proportional to the net force acting on it and inversely proportional to its mass.
+Mathematically, it is expressed as F = ma, where F is the net force, m is the mass, and a is
+the acceleration. This law explains how the velocity of an object changes when a force is
+applied to it."
+4,"What caused World War I?","World War I started because Archduke Franz Ferdinand was
+assassinated.","The causes of World War I were complex and multifaceted, including: (1)
+Militarism: The major European powers were engaged in an arms race; (2) Alliance system:
+Europe was divided into two opposing alliance networks; (3) Imperialism: Competition for
+colonies and resources; (4) Nationalism: Growing patriotic sentiment and desire for
+independence; (5) Immediate trigger: The assassination of Archduke Franz Ferdinand of
+Austria-Hungary in Sarajevo on June 28, 1914, which set off a series of diplomatic and
+military actions that led to the war."
+5,"Describe the water cycle.","The water cycle is evaporation, condensation, and
+precipitation.","The water cycle, also known as the hydrologic cycle, describes the
+continuous movement of water on, above, and below the Earth's surface. It consists of
+several key processes: (1) Evaporation: water changes from liquid to vapor due to solar
+energy; (2) Transpiration: plants release water vapor; (3) Condensation: water vapor cools
+and forms clouds; (4) Precipitation: water falls as rain, snow, etc.; (5) Infiltration: water soaks
+into soil; (6) Runoff: water flows over land; (7) Collection: water gathers in bodies of water.
+This cycle is driven by solar energy and gravity, and is essential for maintaining Earth's
+ecosystems."
+"""
