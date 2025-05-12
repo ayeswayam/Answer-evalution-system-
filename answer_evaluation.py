@@ -160,17 +160,13 @@ para_count, avg_sent_len):
 feedback = []
 # Content feedback
 if semantic_score >= 0.8:
-feedback.append(" Excellent understanding of the content. Your answer aligns
-very well with the expected response.")
+feedback.append(" Excellent understanding of the content. Your answer aligns very well with the expected response.")
 elif semantic_score >= 0.6:
-feedback.append("✓ Good grasp of the subject matter. Your answer covers most key
-points.")
+feedback.append("✓ Good grasp of the subject matter. Your answer covers most key points.")
 elif semantic_score >= 0.4:
-feedback.append(" Partial understanding shown. Consider reviewing the topic to
-strengthen your knowledge.")
+feedback.append(" Partial understanding shown. Consider reviewing the topic to strengthen your knowledge.")
 else:
-feedback.append(" Limited alignment with the expected answer. Please revisit the
-material.")
+feedback.append(" Limited alignment with the expected answer. Please revisit the material.")
 # Keyword feedback
 missing_keywords = self.identify_missing_keywords(student_answer, model_answer)
 if keyword_score >= 0.8:
@@ -179,35 +175,28 @@ elif keyword_score >= 0.6:
 feedback.append("✓ Good use of terminology, but some key terms are missing.")
 else:
 if missing_keywords:
-feedback.append(f" Consider including these key concepts: {',
-'.join(missing_keywords[:5])}.")
+feedback.append(f" Consider including these key concepts: {','.join(missing_keywords[:5])}.")
 else:
-feedback.append(" Many important terms and concepts are missing from your
-answer.")
+feedback.append(" Many important terms and concepts are missing from youranswer.")
 # Grammar feedback
 if error_count == 0:
 feedback.append(" Perfect grammar and spelling.")
 elif error_count <= 2:
 feedback.append("✓ Few minor grammar or spelling issues.")
 elif error_count <= 5:
-feedback.append(f" Several grammar/spelling errors detected ({error_count}).
-Consider proofreading your work.")
+feedback.append(f" Several grammar/spelling errors detected ({error_count}).Consider proofreading your work.")
 else:
-feedback.append(f" Significant grammar/spelling issues ({error_count}) that affect
-readability.")
+feedback.append(f" Significant grammar/spelling issues ({error_count}) that affect readability.")
 # Structure feedback
 if structure_score >= 0.8:
 feedback.append(" Well-structured response with good paragraph organization.")
 elif structure_score >= 0.5:
-feedback.append("✓ Adequate structure, but could use more organization or
-paragraph breaks.")
+feedback.append("✓ Adequate structure, but could use more organization or paragraph breaks.")
 else:
 if para_count <= 1:
-feedback.append(" Consider breaking your answer into multiple paragraphs for
-better readability.")
+feedback.append(" Consider breaking your answer into multiple paragraphs for better readability.")
 if avg_sent_len > 25:
-feedback.append(" Your sentences are quite long. Consider using shorter,
-clearer sentences.")
+feedback.append(" Your sentences are quite long. Consider using shorter,clearer sentences.")
 return "\n".join(feedback)
 def identify_missing_keywords(self, student_answer, model_answer):
 """Identify important keywords from model answer missing in student answer"""
